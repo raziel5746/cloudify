@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <script src="pwabuilder-sw.js"></script>
+    <script src="pwabuilder-sw-register.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cloudify</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+</head>
+<body>
+    <div id="row">
+        <div id="left">
+            <canvas></canvas>
+            <div id="menu-toggle">Settings</div>
+            <div id="load-screen">
+                <div id="close-load-screen">close</div>
+            </div>
+        </div>
+
+        <div id="right">
+            <div class="slidecontainer">
+                <ul>
+                    <li>
+                        <div class="slider-title" id="parent">Background color</div>
+                    </li>
+                    <li id="colors-parent">
+                        <div class="slider-title flex" id="colorA">A</div>
+                        <div class="slider-title flex" id="colorB">B</div>
+                        <div class="slider-title flex" id="colorC">C</div>
+                    </li>
+                    <li>
+                        <div class="slider-title">Density: <span id="densityValue"></span></div>
+                        <input type="range" min="0" max="4000" value="1500" class="slider" id="density">
+                    </li>
+                    <li>
+                        <div class="slider-title">Max radius: <span id="maxRadiusValue"></span></div>
+                        <input type="range" min="0" max="100" value="60" class="slider" id="maxRadius">
+                    </li>
+                    <li>
+                        <div class="slider-title">Min radius: <span id="minRadiusValue"></span></div>
+                        <input type="range" min="0" max="100" value="20" class="slider" id="minRadius">
+                    </li>
+                    <li>
+                        <div class="slider-title">Interactive radius: <span id="interactiveRadiusValue"></span></div>
+                        <input type="range" min="0" max="200" value="70" class="slider" id="interactiveRadius">
+                    </li>
+                    <li>
+                        <div class="slider-title">Opacity: <span id="opacityValue"></span></div>
+                        <input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="opacity">
+                    </li>
+                    <li>
+                        <div class="slider-title">Increase speed: <span id="increaseSpeedValue"></span></div>
+                        <input type="range" min="0" max="30" value="10" class="slider" id="increaseSpeed">
+                    </li>
+                    <li>
+                        <div class="slider-title">Decrease speed: <span id="decreaseSpeedValue"></span></div>
+                        <input type="range" min="0" max="5" value="2" step="0.1" class="slider" id="decreaseSpeed">
+                    </li>
+                    <li>
+                        <div class="slider-title">X dispersion: <span id="xSpeedValue"></span></div>
+                        <input type="range" min="0" max="20" value="2" class="slider" id="xSpeed">
+                    </li>
+                    <li>
+                        <div class="slider-title">Y dispersion: <span id="ySpeedValue"></span></div>
+                        <input type="range" min="0" max="20" value="2" class="slider" id="ySpeed">
+                    </li>
+                </ul>
+                <ul class="buttons">
+                    <li><button id="btn-save" type="button">SAVE</button></li>
+                    <li><button id="btn-load" type="button">LOAD</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="jqColorPicker.min.js"></script> -->
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+    <script src="ManUp.min.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
