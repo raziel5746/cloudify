@@ -11,6 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reinvented-color-wheel.min.css">
     <title>Cloudify</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -23,24 +24,33 @@
 <body>
     <div id="row">
         <div id="left">
+            <div id="color-picker-container">
+                <div id="color_buttons-container">
+                    <ul>
+                        <li>
+                            <div class="slider-title color-btn" id="colorBG">Background color</div>
+                        </li>
+                        <li id="colors-container">
+                            <div class="slider-title flex color-btn" id="colorA"></div>
+                            <div class="slider-title flex color-btn" id="colorB"></div>
+                            <div class="slider-title flex color-btn" id="colorC"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <canvas></canvas>
             <div id="menu-toggle">Settings</div>
             <div id="load-screen">
-                <div id="close-load-screen">close</div>
+                <div id="close-load-screen-btn">close</div>
             </div>
         </div>
 
         <div id="right">
             <div class="slidecontainer">
-                <ul>
-                    <li>
-                        <div class="slider-title" id="parent">Background color</div>
-                    </li>
-                    <li id="colors-parent">
-                        <div class="slider-title flex" id="colorA">A</div>
-                        <div class="slider-title flex" id="colorB">B</div>
-                        <div class="slider-title flex" id="colorC">C</div>
-                    </li>
+                <ul class="">
+                    <div id="colors-toggle">
+                        <div class="slider-title" id="toggle-colors-btn">COLORS</div>
+                    </div>
                     <li>
                         <div class="slider-title">Density: <span id="densityValue"></span></div>
                         <input type="range" min="0" max="4000" value="1500" class="slider" id="density">
@@ -77,20 +87,18 @@
                         <div class="slider-title">Y dispersion: <span id="ySpeedValue"></span></div>
                         <input type="range" min="0" max="20" value="2" class="slider" id="ySpeed">
                     </li>
-                </ul>
-                <ul class="buttons">
-                    <li><button id="btn-save" type="button">SAVE</button></li>
-                    <li><button id="btn-load" type="button">LOAD</button></li>
+                    <li class="buttons">
+                        <div id="btn-save"class="button">SAVE</div>
+                        <div id="btn-load" class="button">LOAD</div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
 
-    <!-- <script src="jquery-3.3.1.min.js"></script> -->
-    <!-- <script type="text/javascript" src="jqColorPicker.min.js"></script> -->
-    <script src="https://unpkg.com/vanilla-picker@2"></script>
     <script src="ManUp.min.js"></script>
+    <script src="reinvented-color-wheel.min.js"></script>
     <script src="canvas.js"></script>
 </body>
 </html>
