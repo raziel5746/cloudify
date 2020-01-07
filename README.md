@@ -1,1 +1,1 @@
-This is en app I'm doing just to practice making apps.
+A simple PWA (Progressive Web App) for distracting the mind.
